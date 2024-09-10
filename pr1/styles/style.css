@@ -1,0 +1,189 @@
+@charset "UTF-8";
+html {
+  font-size: 9px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+label {
+  color: #565656;
+  line-height: 27px;
+}
+
+input:not([type=submit]),
+select {
+  padding: 14px 25px;
+  display: block;
+  min-width: 220px;
+  border-radius: 25px;
+  border: #8B54FF 1px solid;
+  margin-bottom: 10px;
+  background-color: #FBFBFB;
+  font-size: 9px;
+}
+input:not([type=submit]):focus-visible,
+select:focus-visible {
+  outline: #8B54FF 1px solid;
+}
+
+fieldset {
+  border: 0;
+}
+
+a,
+a:visited {
+  color: #8B54FF;
+}
+
+.form-container {
+  padding: 10px 22px;
+  background-color: #FBFBFB;
+  margin: 10px auto;
+  max-width: 570px;
+  width: 100%;
+  height: 645px;
+  font-family: Inter, sans-serif;
+}
+.form-container h2 {
+  font-size: 9px;
+}
+
+.main-fieldset input {
+  width: 485px;
+}
+
+.sub-fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  color: #8B54FF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.custom-select {
+  position: relative;
+  width: 220px;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #FBFBFB;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #8B54FF transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #8B54FF transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #8B54FF;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent #8B54FF transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #8B54FF;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #8B54FF;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.heading {
+  display: flex;
+  max-width: 520px;
+  height: 45px;
+  margin: 0 auto 90px;
+  line-height: 45px;
+  border-bottom: #8B54FF 1px solid;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+input[type=submit] {
+  padding: 17px 0;
+  min-width: 130px;
+  color: #FBFBFB;
+  background-color: #8B54FF;
+  border: none;
+  border-radius: 25px;
+  font-size: 9px;
+}
+
+.colored-text {
+  color: #8B54FF;
+}
+
+.form-footer {
+  margin-top: 32px;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+.required::after {
+  content: " *";
+  color: #8B54FF;
+}
+
+.datalist::after {
+  content: "*    🡭";
+  color: #8B54FF;
+  white-space: pre;
+}/*# sourceMappingURL=style.css.map */

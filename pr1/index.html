@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Delivery Job Application Form</title>
+</head>
+<body>
+    <main>
+        <section class="form-container">
+            <div class="heading colored-text">
+                <h2>delivery job application form.</h2>
+                <p class="copyright">©opyright <span class="bold">delivery—app</span> 2022.</p>
+            </div>
+            <form action="#" method="get" autocomplete="on">
+                <fieldset class="main-fieldset">
+                    <label for="full-name" class="required">Full name</label>
+                    <input type="text" name="full-name" placeholder="Full name" required>
+                    <label for="email" class="required">Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="phone-number" class="required">Phone number</label>
+                    <input type="tel" name="phone-number" placeholder="Phone number" required>
+                </fieldset>
+                <fieldset class="sub-fieldset">
+                    <div class="form-group">
+                        <label for="workplace-type" class="required">Workplace type</label>
+                        <select name="workplace-type" required>
+                            <option value="">On-site</option>
+                            <option value="">Hybrid</option>
+                            <option value="">Remote</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-location" class="required datalist">Job location</label>
+                        <input type="text" name="job-location" list="location-list" placeholder="Job location">
+                    </div>
+                    <datalist id="location-list">
+                        <option value="Kyiv">Kyiv</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+                        <option value="Herson">Herson</option>
+                        <option value="Donetsk">Donetsk</option>
+                        <option value="Zhytomyr">Zhytomyr</option>
+                    </datalist>
+                    <div class="form-group">
+                        <label for="employment-type" class="required">Employment type</label>
+                        <select name="employment-type" required>
+                            <option value="part-time">Part time</option>
+                            <option value="contract">Contract</option>
+                            <option value="temporary">Temporary</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <div class="form-footer">
+                    <input type="submit" value="Send application" class="bold">
+                    <p class="colored-text">By clicking <span class="bold">Send application</span>,
+                        you agree to our
+                        <span class="bold"><a href="">User Agreement</a></span>,
+                        <span class="bold"><a href="">Privacy Policy</a></span>, and
+                        <span class="bold"><a href="">Cookie Policy</a></span>.
+                    </p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
