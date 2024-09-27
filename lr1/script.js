@@ -5,7 +5,7 @@ buttons[0].addEventListener('click', function() {
 })
 
 buttons[1].addEventListener('mouseover', function() {
-    document.write('Hello, world!')
+    document.write('<p>Hello, world!</p>')
 })
 
 buttons[2].addEventListener('click', function() {
@@ -55,7 +55,9 @@ buttons[6].addEventListener('click', function() {
 buttons[7].addEventListener('click', function() {
     let num = prompt('Введіть номер місяця');
     if (num != '' && num != '') {
-        if (num > 2 && num < 6) {
+        if(num > 12 || num < 1) {
+            alert('Введено невірне число');
+        } else if (num > 2 && num < 6) {
             alert('То весна');
         } else if(num > 5 && num < 9) {
             alert('То літо');
