@@ -271,4 +271,72 @@ let imagesArray = [
 // Виклик функції
 initPhotoRotator('rotator', imagesArray);
 
+function initCaptcha(containerId, digitCount) {
+    const container = document.getElementById(containerId);
+
+    if (!container || digitCount <= 0) return;
+
+    // Створення елементів
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('captcha-wrapper');
+
+    const display = document.createElement('div');
+    display.classList.add('captcha-display');
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Введіть число';
+    input.classList.add('captcha-input');
+
+    const button = document.createElement('button');
+    button.textContent = 'Перевірити';
+    button.classList.add('captcha-button');
+
+    const result = document.createElement('div');
+    result.classList.add('captcha-result');
+
+    wrapper.appendChild(display);
+    wrapper.appendChild(input);
+    wrapper.appendChild(button);
+    wrapper.appendChild(result);
+    container.appendChild(wrapper);
+
+    let captchaValue = '';
+
+    // Функція для генерації нового числа
+    function generateCaptcha() {
+        captchaValue = '';
+        display.innerHTML = ''; // Очищення попередньої капчі
+
+        for (let i = 0; i < digitCount; i++) {
+            const digit = Math.floor(Math.random() * 10).toString();
+            captchaValue += digit;
+
+            const digitSpan = document.createElement('span');
+            digitSpan.textContent = digit;
+            digitSpan.classList.add('captcha-digit');
+            display.appendChild(digitSpan);
+        }
+    }
+
+    // Перевірка введення
+    button.addEventListener('click', () => {
+        const userInput = input.value.trim();
+        if (userInput === captchaValue) {
+            result.textContent = 'Введено правильно!';
+            result.style.color = 'green';
+        } else {
+            result.textContent = 'Неправильне число.';
+            result.style.color = 'red';
+            generateCaptcha(); // Генерація нової капчі
+        }
+        input.value = ''; // Очищення поля вводу
+    });
+
+    // Початкова генерація капчі
+    generateCaptcha();
+}
+
+// Ініціалізація капчі
+initCaptcha('captcha-container', 5);
 
