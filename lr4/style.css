@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  color: aliceblue;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: darkseagreen;
+  padding: 50px 30px;
+  border-radius: 30px;
+}
+.wrapper h2 {
+  margin: 10px 0;
+}
+.wrapper label {
+  font-weight: 600;
+}
+.wrapper input {
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Rubik", sans-serif;
+  max-width: 300px;
+  background-color: aliceblue;
+}
+.wrapper button {
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Rubik", sans-serif;
+  max-width: 300px;
+  color: darkseagreen;
+  background-color: aliceblue;
+}
+
+.rotator-wrapper {
+  border: 1px solid gray;
+  padding: 10px;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rotator-header {
+  margin-bottom: 10px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+}
+
+.rotator-image-container {
+  position: relative;
+}
+
+.rotator-image {
+  max-width: 100%;
+  max-height: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid gray;
+}
+
+.rotator-title {
+  margin: 10px 0 5px 0;
+}
+
+.rotator-description {
+  margin: 5px 0 0 0;
+  border-top: 1px solid gray;
+  padding-top: 5px;
+}
+
+.rotator-button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 1px solid gray;
+  height: 100%;
+  background: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.rotator-button-back {
+  left: 0;
+}
+
+.rotator-button-next {
+  right: 0;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Конвертер</h2>
+        <label for="far">Градуси за Фаренгейтом</label>
+        <input type="text" id="far" name="far" placeholder="Градуси за Фаренгейтом">
+        <label for="far">Градуси за Цельсієм</label>
+        <input type="text" id="cel" name="cel" placeholder="Градуси за Цельсієм">
+    </div>
+    <div class="wrapper">
+        <h2>Перевірка таблиці множення</h2>
+        <p id="score">Рахунок: 0% (0 вірних відповідей з 0)</p>
+        <div id="task">Приклад В)</div>
+        <input type="number" id="answer" placeholder="Ваша відповідь">
+        <div>
+            <button id="checkBtn">Перевірити</button>
+            <button id="nextBtn">Наступне завдання</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <div class="wrapper">
+        <h2>Перевірка таблиці множення 2</h2>
+        <p id="score2">Рахунок: 0% (0 вірних відповідей з 0)</p>
+        <div id="task2">Скільки буде?</div>
+        <form id="options2">
+            <!-- Радіокнопки будуть додані динамічно -->
+        </form>
+        <div id="result2"></div>
+    </div>
+    <div id="rotator"></div>
+    <script src="script.js"></script>
+</body>
+</html>
