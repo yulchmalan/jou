@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p id="dateRes">Date is...</p>
+        <p id="weekDay">Week day is...</p>
+    </div>
+    <div class="wrapper">
+        <input type="text" placeholder="Рік" id="year" name="year">
+        <input type="text" placeholder="Місяць" id="month" name="month">
+        <button type="button" id="checkLastDay">Вивести останній день</button>
+        <p id="result">Останній день місяця: </p>
+    </div>
+    <div class="wrapper">
+        <p>Кіко то секунд до завтра?</p>
+        <p id="secondsResult">До завтра залишилось ... секунд</p>
+    </div>
+    <div class="wrapper">
+        <p>Введіть дату у форматі DD.MM.YY HH:mm:ss</p>
+        <input type="text" id="date" name="date">
+        <button type="button" id="checkDate">Відформатувати дату</button>
+        <p id="dateResult"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
