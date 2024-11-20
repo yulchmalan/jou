@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">Tab 1</div>
+        <div class="tab">Tab 2</div>
+        <div class="tab">Tab 3</div>
+        <div class="tabContent">
+            <div id="block" class="block"></div>
+            <div class="controls">
+                <div>Верхній лівий радіус:
+                    <input type="range" id="rtl" min="0" max="100" value="0" oninput="generateRad()">
+                    <input type="text" id="ttl" value="0">
+                </div>
+                <div>Верхній правий радіус:
+                    <input type="range" id="rtr" min="0" max="100" value="0" oninput="generateRad()">
+                    <input type="text" id="ttr" value="0">
+                </div>
+                <div>Нижній правий радіус:
+                    <input type="range" id="rbr" min="0" max="100" value="0" oninput="generateRad()">
+                    <input type="text" id="tbr" value="0">
+                </div>
+                <div>Нижній лівий радіус:
+                    <input type="range" id="rbl" min="0" max="100" value="0" oninput="generateRad()">
+                    <input type="text" id="tbl" value="0">
+                </div>
+                <textarea name="codeRad" id="codeRad" rows="5" readonly></textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div id="displayBlock">
+                <div class="childBlock">Child</div>
+                <div class="childBlock">Child</div>
+                <div class="childBlock">Child</div>
+            </div>
+            <div class="controls">
+                <div>Виберіть значення display:
+                    <select id="displaySelect" onchange="generateDisplay()">
+                        <option value="block">block</option>
+                        <option value="inline">inline</option>
+                        <option value="none">none</option>
+                    </select>
+                </div>
+                <textarea id="сodeDisplay" rows="5" readonly></textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div id="fontBlock">
+                <p class="textExample">Sample text</p>
+            </div>
+            <div class="controls">
+                <div>Виберіть розмір шрифту:
+                    <input type="range" id="fontSizeRange" min="10" max="100" value="16" oninput="generateFontSize()">
+                    <input type="text" id="fontSizeValue" value="16" onchange="generateFontSize()">
+                </div>
+                <textarea id="cssCodeFontSize" rows="5" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
