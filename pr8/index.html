@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Лабораторна робота №7</title>
+</head>
+<body>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p>Корзина пуста</p>
+            <button>Закрити</button>
+        </div>
+    </div>    
+    <div class="page-wrapper">
+        <div class="cart" id="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="cart-items-count" class="cart-items-count">0</div>
+        </div>
+        <h2 class="page-header">Обов'язково додайте своє замовлення</h2>
+        <div class="article-wrapper">
+            <div class="nav-button left-nav-button"><span class="inner-center">&lt;</span></div>
+            <div class="article new-article circle">
+                <div class="article-header"><a href="https://soft.rozetka.com.ua/ua/os/c80063/" target="_blank" class="inner-center">Операційні системи</a></div>
+                <div class="image-box"><a href="https://soft.rozetka.com.ua/ua/microsoft_kw9_00664/p340729465/" target="_blank"><img class="inner-center" src="images/1.webp" alt="windows 10"></a></div>
+                <div class="article-bottom-caption"><a href="https://soft.rozetka.com.ua/ua/microsoft_kw9_00664/p340729465/" target="_blank">Windows 10 Pro</a></div>
+                <div class="price-box"><span class="price"><b>13299</b> грн</span></div>
+                <div class="button button-inactive"><span class="inner-center">Незабаром у продажі</span></div>
+            </div>
+            <div class="article">
+                <div class="article-header"><a href="https://soft.rozetka.com.ua/ua/ofisnye-prilojeniya/c80064/" target="_blank" class="inner-center">Офісні програми</a></div>
+                <div class="image-box"><a href="https://soft.rozetka.com.ua/ua/microsoft_79g_05338/p322687624/" target="_blank"><img class="inner-center" src="images/2.webp" alt="office for home and studying"></a></div>
+                <div class="article-bottom-caption"><a href="https://soft.rozetka.com.ua/ua/microsoft_kw9_00664/p340729465/" target="_blank">Microsoft Office Для дому та навчання</a></div>
+                <div class="price-box"><span class="old-price">5199 грн</span><span class="price"><b> 4159</b> грн</span></div>
+                <div class="button button-active"><span class="inner-center">У корзину</span></div>
+            </div>
+            <div class="article bestseller-article circle">
+                <div class="article-header"><a href="https://soft.rozetka.com.ua/ua/servernoe-po/c111389/" target="_blank" class="inner-center">Серверне програмне забезпечення</a></div>
+                <div class="image-box"><a href="https://soft.rozetka.com.ua/ua/servernoe-po/c111389/" target="_blank"><img class="inner-center" src="images/3.webp" alt="windows server"></a></div>
+                <div class="article-bottom-caption"><a href="https://soft.rozetka.com.ua/ua/servernoe-po/c111389/" target="_blank">Microsoft Windows Server</a></div>
+                <div class="price-box"><span class="price"><b>47999</b> грн</span></div>
+                <div class="button button-active"><span class="inner-center">У корзину</span></div>
+            </div>
+            <div class="article bestseller-article circle">
+                <div class="article-header"><a href="https://soft.rozetka.com.ua/ua/muljtimedia-grafika-i-dizajn/c80065/" target="_blank" class="inner-center">Мультимедіа програми</a></div>
+                <div class="image-box"><a href="https://soft.rozetka.com.ua/ua/202011877/p202011877/" target="_blank"><img class="inner-center" src="images/4.webp" alt="adobe cloud"></a></div>
+                <div class="article-bottom-caption"><a href="https://soft.rozetka.com.ua/ua/202011877/p202011877/" target="_blank">Adobe Creative Cloud</a></div>
+                <div class="price-box"><span class="price"><b>60282</b> грн</span></div>
+                <div class="button button-active"><span class="inner-center">У корзину</span></div>
+            </div>
+            <div class="nav-button right-nav-button"><span class="inner-center">&gt;</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
