@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Корзина</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="cart-page-wrapper">
+            <h2>Ви обрали:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Назва товару</th>
+                        <th>Ціна за од.</th>
+                        <th>К-сть</th>
+                        <th>Сума</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+            <div>
+                <p>Разом до оплати: <span id="total-price">0 грн</span></p>
+            </div>
+            <div class="cart-actions">
+                <button id="back-to-shopping">Повернутись до покупок</button>
+                <button id="checkout">Оплатити</button>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
