@@ -1,55 +1,46 @@
 {
     "pageTitle": "Лабораторна робота №7",
     "products": [
-      {
-        "name": "Windows 10 Pro",
-        "category": "Операційні системи",
-        "price": 13299,
-        "image": "images/1.webp",
-        "link": "https://soft.rozetka.com.ua/ua/microsoft_kw9_00664/p340729465/",
-        "status": "Незабаром у продажі"
-      },
-      {
-        "name": "Microsoft Office Для дому та навчання",
-        "category": "Офісні програми",
-        "price": 4159,
-        "oldPrice": 5199,
-        "image": "images/2.webp",
-        "link": "https://soft.rozetka.com.ua/ua/microsoft_79g_05338/p322687624/",
-        "status": "У корзину"
-      },
-      {
-        "name": "Microsoft Windows Server",
-        "category": "Серверне програмне забезпечення",
-        "price": 47999,
-        "image": "images/3.webp",
-        "link": "https://soft.rozetka.com.ua/ua/servernoe-po/c111389/",
-        "status": "У корзину"
-      },
-      {
-        "name": "Microsoft Windows Server",
-        "category": "Серверне програмне забезпечення",
-        "price": 47999,
-        "image": "images/3.webp",
-        "link": "https://soft.rozetka.com.ua/ua/servernoe-po/c111389/",
-        "status": "У корзину"
-      },
-      {
-        "name": "Microsoft Windows Server",
-        "category": "Серверне програмне забезпечення",
-        "price": 47999,
-        "image": "images/3.webp",
-        "link": "https://soft.rozetka.com.ua/ua/servernoe-po/c111389/",
-        "status": "У корзину"
-      },
-      {
-        "name": "Adobe Creative Cloud",
-        "category": "Мультимедіа програми",
-        "price": 60282,
-        "image": "images/4.webp",
-        "link": "https://soft.rozetka.com.ua/ua/202011877/p202011877/",
-        "status": "У корзину"
-      }
+        {
+            "name": "Windows 10 Pro",
+            "nameKey": "windows10",
+            "category": "Операційні системи",
+            "categoryKey": "os",
+            "price": 13299,
+            "image": "images/1.webp",
+            "link": "https://soft.rozetka.com.ua/ua/microsoft_kw9_00664/p340729465/",
+            "status": "Незабаром у продажі"
+        },
+        {
+            "name": "Microsoft Office Для дому та навчання",
+            "nameKey": "officeHome",
+            "category": "Офісні програми",
+            "categoryKey": "office",
+            "price": 4159,
+            "oldPrice": 5199,
+            "image": "images/2.webp",
+            "link": "https://soft.rozetka.com.ua/ua/microsoft_79g_05338/p322687624/",
+            "status": "У корзину"
+        },
+        {
+            "name": "Microsoft Windows Server",
+            "nameKey": "windowsServer",
+            "category": "Серверне програмне забезпечення",
+            "categoryKey": "server",
+            "price": 47999,
+            "image": "images/3.webp",
+            "link": "https://soft.rozetka.com.ua/ua/servernoe-po/c111389/",
+            "status": "У корзину"
+        },
+        {
+            "name": "Adobe Creative Cloud",
+            "nameKey": "adobeCloud",
+            "category": "Мультимедіа програми",
+            "categoryKey": "multimedia",
+            "price": 60282,
+            "image": "images/4.webp",
+            "link": "https://soft.rozetka.com.ua/ua/202011877/p202011877/",
+            "status": "У корзину"
+        }
     ]
-  }
-  
+}

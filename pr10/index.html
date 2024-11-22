@@ -11,6 +11,17 @@
     <title>Лабораторна робота №7</title>
 </head>
 <body>
+    <div id="language-modal" class="modal hidden">
+        <div class="modal-content">
+            <p data-i18n="modalChooseLanguage">Оберіть мову для перегляду сторінки:</p>
+            <button class="language-button" data-lang="ua">Українська</button>
+            <button class="language-button" data-lang="en">English</button>
+        </div>
+    </div>
+    <select id="language-switcher">
+        <option value="ua">Українська</option>
+        <option value="en">English</option>
+    </select>
     <div id="modal" class="modal hidden">
         <div class="modal-content">
             <p>Корзина пуста</p>
@@ -26,5 +37,8 @@
         <div class="article-wrapper"></div>
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.4/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.3/i18nextHttpBackend.min.js"></script>
 </body>
 </html>

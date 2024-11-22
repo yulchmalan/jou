@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', loadCart);
 
 async function fetchProducts() {
     try {
-        const response = await fetch('https://yulchmalan.github.io/jou/pr9/products.json');
+        const response = await fetch('https://yulchmalan.github.io/jou/pr10/products.json');
         const data = await response.json();
         renderProducts(data.products);
         document.title = data.pageTitle; 
@@ -77,29 +77,152 @@ async function fetchProducts() {
 
 function renderProducts(products) {
     const articleWrapper = document.querySelector('.article-wrapper');
-    articleWrapper.innerHTML = ''; 
+    articleWrapper.innerHTML = ''; // Очищуємо контейнер перед рендерингом
 
     products.forEach(product => {
         const productCard = document.createElement('div');
         productCard.classList.add('article');
 
         productCard.innerHTML = `
-            <div class="article-header"><a href="${product.link}" target="_blank">${product.category}</a></div>
-            <div class="image-box"><a href="${product.link}" target="_blank"><img src="${product.image}" alt="${product.name}"></a></div>
-            <div class="article-bottom-caption"><a href="${product.link}" target="_blank">${product.name}</a></div>
+            <div class="article-header">
+                <a href="${product.link}" target="_blank" data-i18n="cardHeader.${product.categoryKey}">
+                    ${i18next.t(`cardHeader.${product.categoryKey}`)}
+                </a>
+            </div>
+            <div class="image-box">
+                <a href="${product.link}" target="_blank">
+                    <img src="${product.image}" alt="${product.name}">
+                </a>
+            </div>
+            <div class="article-bottom-caption">
+                <a href="${product.link}" target="_blank" data-i18n="cardTitle.${product.nameKey}">
+                    ${i18next.t(`cardTitle.${product.nameKey}`)}
+                </a>
+            </div>
             <div class="price-box">
                 ${product.oldPrice ? `<span class="old-price">${product.oldPrice} грн</span>` : ''}
-                <span class="price"><b>${product.price}</b> грн</span>
+                <span class="price">
+                    <b data-i18n="cardPrice.${product.nameKey}">
+                        ${i18next.t(`cardPrice.${product.nameKey}`)}
+                    </b>
+                </span>
             </div>
             <div class="button ${product.status === 'Незабаром у продажі' ? 'button-inactive' : 'button-active'}">
-                <span class="inner-center">${product.status}</span>
+                <span class="inner-center" data-i18n="${product.status === 'Незабаром у продажі' ? 'comingSoon' : 'addToCart'}">
+                    ${i18next.t(product.status === 'Незабаром у продажі' ? 'comingSoon' : 'addToCart')}
+                </span>
             </div>
         `;
 
         articleWrapper.appendChild(productCard);
     });
 
-    setupAddToCartButtons();
+    setupAddToCartButtons(); 
 }
 
+
 document.addEventListener('DOMContentLoaded', fetchProducts);
+
+document.addEventListener('DOMContentLoaded', () => {
+    i18next.init({
+        lng: localStorage.getItem('language') || 'ua',
+        fallbackLng: 'ua', 
+        debug: true,
+        resources: {
+            en: {
+                translation: {
+                    "title": "Be sure to add your order",
+                    "cartEmpty": "Your cart is empty",
+                    "addToCart": "Add to cart",
+                    "cardHeader": {
+                        "os": "Operating Systems",
+                        "office": "Office Applications",
+                        "server": "Server Software",
+                        "multimedia": "Multimedia Programs"
+                    },
+                    "cardTitle": {
+                        "windows10": "Windows 10 Pro",
+                        "officeHome": "Microsoft Office Home & Student",
+                        "windowsServer": "Microsoft Windows Server",
+                        "adobeCloud": "Adobe Creative Cloud"
+                    },
+                    "cardPrice": {
+                        "windows10": "13,299 грн",
+                        "officeHome": "4,159 грн",
+                        "windowsServer": "47,999 грн",
+                        "adobeCloud": "60,282 грн"
+                    }
+                }
+            },
+            ua: {
+                translation: {
+                    "title": "Обов'язково додайте своє замовлення",
+                    "cartEmpty": "Корзина пуста",
+                    "addToCart": "У корзину",
+                    "cardHeader": {
+                        "os": "Операційні системи",
+                        "office": "Офісні програми",
+                        "server": "Серверне програмне забезпечення",
+                        "multimedia": "Мультимедіа програми"
+                    },
+                    "cardTitle": {
+                        "windows10": "Windows 10 Pro",
+                        "officeHome": "Microsoft Office Для дому та навчання",
+                        "windowsServer": "Microsoft Windows Server",
+                        "adobeCloud": "Adobe Creative Cloud"
+                    },
+                    "cardPrice": {
+                        "windows10": "13,299 грн",
+                        "officeHome": "4,159 грн",
+                        "windowsServer": "47,999 грн",
+                        "adobeCloud": "60,282 грн"
+                    }
+                }
+            }
+        }        
+    }, (err, t) => {
+        if (err) console.error('Помилка i18next:', err);
+        updateContent();
+        checkLanguageSelection();
+    });
+
+    document.getElementById('language-switcher').addEventListener('change', (event) => {
+        const selectedLang = event.target.value;
+        i18next.changeLanguage(selectedLang, () => {
+            localStorage.setItem('language', selectedLang);
+            updateContent();
+        });
+    });    
+});
+
+function updateContent() {
+    document.querySelector('.page-header').textContent = i18next.t('title');
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        const translation = i18next.t(key);
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+}
+
+function checkLanguageSelection() {
+    const userLang = localStorage.getItem('language');
+    if (!userLang) {
+        const modal = document.getElementById('language-modal');
+        modal.classList.remove('hidden');
+
+        document.querySelectorAll('.language-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const selectedLang = e.target.dataset.lang;
+                i18next.changeLanguage(selectedLang, () => {
+                    localStorage.setItem('language', selectedLang);
+                    modal.classList.add('hidden');
+                    updateContent();
+                });
+            });
+        });
+    } else {
+        i18next.changeLanguage(userLang, updateContent);
+    }
+}
