@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "title": "Be sure to add your order",
                     "cartEmpty": "Your cart is empty",
                     "addToCart": "Add to cart",
+                    "comingSoon": "Coming soon",
                     "cardHeader": {
                         "os": "Operating Systems",
                         "office": "Office Applications",
@@ -159,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "title": "Обов'язково додайте своє замовлення",
                     "cartEmpty": "Корзина пуста",
                     "addToCart": "У корзину",
+                    "comingSoon": "Незабаром",
                     "cardHeader": {
                         "os": "Операційні системи",
                         "office": "Офісні програми",
